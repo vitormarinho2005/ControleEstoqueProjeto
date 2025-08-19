@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Estoque</title>
+  <link rel="stylesheet" href="css/estoque.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Gerenciador de Estoque</h1>
+    <nav>
+        <button class="btn-menu" onclick="location.href='pag.html'">Menu</button>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="form-section">
+      <h2>Adicionar Produto</h2>
+      <form id="formEstoque" class="estoque-form">
+        <label for="nome">Nome do produto:</label>
+        <input type="text" id="nome" placeholder="Nome do produto" required>
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" placeholder="Quantidade" required>
+
+        <label for="preco">Preço (R$):</label>
+        <input type="number" id="preco" placeholder="Preço" required>
+
+        <button type="submit" id="adicionarBtn" class="btn-submit">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Produtos Cadastrados</h2>
+      <table id="tabelaProdutos" class="produtos-table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Preço (R$)</th>
+            <th>Total (R$)</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Produtos serão inseridos aqui via JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 - Estoque Rápido Ltda.</p>
+  </footer>
+
+  <script src="js/estoque.js"></script>
+</body>
+</html>

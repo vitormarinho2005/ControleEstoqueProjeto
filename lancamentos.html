@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Lançamentos</title>
+    <link rel="stylesheet" href="css/lancamento.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Controle de Entradas e Saídas</h1>
+        <nav>
+            <button class="btn-menu" onclick="location.href='pag.html'">Menu</button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="form-section">
+            <h2>Registrar Lançamento</h2>
+            <form id="formLancamento" class="lancamento-form">
+                <label for="data">Data:</label>
+                <input type="date" id="data" required>
+
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" required>
+                    <option value="ENTRADA">ENTRADA</option>
+                    <option value="SAIDA">SAÍDA</option>
+                </select>
+
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" placeholder="Descrição" required>
+
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" placeholder="Produto" required>
+
+                <label for="qtd">Quantidade:</label>
+                <input type="number" id="qtd" placeholder="Qtd" required>
+
+                <button type="submit" class="btn-submit">Registrar</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Lançamentos Registrados</h2>
+            <table id="tabelaLancamentos" class="lancamentos-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>Produto</th>
+                        <th>Qtd</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 - Estoque Rápido Ltda.</p>
+    </footer>
+</body>
+</html>
