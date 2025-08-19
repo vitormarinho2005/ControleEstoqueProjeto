@@ -2,163 +2,159 @@
    ESTILOS GERAIS
 ================================ */
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  color: #333;
 }
 
 /* ================================
    CABEÇALHO
 ================================ */
 .header {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .header h1 {
-    font-size: 2rem;
-    color: #3498db;
+  color: #3498db;
 }
 
-.btn-menu {
-    background-color: #0077cc;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+.header nav button {
+  margin: 0 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.btn-menu:hover {
-    background-color: #02497c;
-}
-
-/* ================================
-   CONTEÚDO PRINCIPAL
-================================ */
-.main-content {
-    max-width: 900px;
-    margin: auto;
+.header nav button:hover {
+  background: #2980b9;
 }
 
 /* ================================
    FORMULÁRIO
 ================================ */
 .form-section {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
 .form-section h2 {
-    margin-bottom: 15px;
-    color: #3498db;
+  color: #3498db;
+  margin-bottom: 15px;
 }
 
 .estoque-form label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-    text-align: left;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  text-align: left;
 }
 
 .estoque-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 .estoque-form input:focus {
-    border-color: #3498db;
-    outline: none;
+  border-color: #3498db;
+  outline: none;
 }
 
-/* Botão adicionar */
-.estoque-form .btn-submit {
-    display: inline-block;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #3498db;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
+.btn-submit {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.estoque-form .btn-submit:hover {
-    background: #2980b9;
+.btn-submit:hover {
+  background: #2980b9;
 }
 
 /* ================================
    TABELA
 ================================ */
 .table-section {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.table-section h2 {
-    margin-bottom: 15px;
-    color: #3498db;
+  overflow-x: auto;
+  margin-bottom: 30px;
 }
 
 .produtos-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .produtos-table th,
 .produtos-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 .produtos-table th {
-    background: #3498db;
-    color: white;
+  background: #3498db;
+  color: #fff;
 }
 
 .produtos-table tbody tr:nth-child(even) {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
-/* Botões de ação na tabela */
-.produtos-table td button {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 6px;
-    background: #e74c3c;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s;
+.produtos-table button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #e74c3c;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.produtos-table td button:hover {
-    background: #c0392b;
+.produtos-table button:hover {
+  background: #c0392b;
+}
+
+/* ================================
+   RELATÓRIO
+================================ */
+.relatorio-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.relatorio-section h2 {
+  color: #3498db;
+  margin-bottom: 15px;
 }
 
 /* ================================
    RODAPÉ
 ================================ */
 .footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-    font-size: 0.9rem;
-    color: #555;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #555;
 }

@@ -10,11 +10,12 @@
   <header class="header">
     <h1>Gerenciador de Estoque</h1>
     <nav>
-        <button class="btn-menu" onclick="location.href='pag.html'">Menu</button>
+      <button class="btn-menu" onclick="location.href='pag.html'">Menu</button>
     </nav>
   </header>
 
   <main class="main-content">
+    <!-- FORMULÁRIO DE ADIÇÃO -->
     <section class="form-section">
       <h2>Adicionar Produto</h2>
       <form id="formEstoque" class="estoque-form">
@@ -31,6 +32,7 @@
       </form>
     </section>
 
+    <!-- TABELA DE PRODUTOS -->
     <section class="table-section">
       <h2>Produtos Cadastrados</h2>
       <table id="tabelaProdutos" class="produtos-table">
@@ -41,12 +43,21 @@
             <th>Preço (R$)</th>
             <th>Total (R$)</th>
             <th>Ações</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <!-- Produtos serão inseridos aqui via JS -->
         </tbody>
       </table>
+    </section>
+
+    <!-- RELATÓRIOS -->
+    <section class="relatorio-section">
+      <h2>Relatórios</h2>
+      <p id="totalTipos">Total tipos de produtos: 0</p>
+      <p id="totalProdutos">Total de produtos: 0</p>
+      <p id="valorTotal">Valor total do estoque: R$ 0.00</p>
     </section>
   </main>
 

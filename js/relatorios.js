@@ -1,67 +1,36 @@
 // ============================
-// Estoque + Relatórios
+// relatorios.js
 // ============================
-
-// Seleção de elementos
-const formEstoque = document.getElementById("formEstoque");
-const nomeInput = document.getElementById("nome");
-const quantidadeInput = document.getElementById("quantidade");
-const precoInput = document.getElementById("preco");
-const tabelaBody = document.getElementById("tabelaProdutos").querySelector("tbody");
-
-const totalTiposEl = document.getElementById("totalTipos");
-const totalProdutosEl = document.getElementById("totalProdutos");
-const valorTotalEl = document.getElementById("valorTotal");
 
 // Recuperar produtos do Local Storage
 let produtos = JSON.parse(localStorage.getItem("produtos")) || [];
-let editandoId = null;
+
+// Selecionar elementos do DOM
+const totalTiposEl = document.getElementById("totalTipos");
+const totalProdutosEl = document.getElementById("totalProdutos");
+const valorTotalEl = document.getElementById("valorTotal");
+const tabelaBody = document.getElementById("tabelaRelatorios").querySelector("tbody");
 
 // ============================
 // Funções
 // ============================
 
-// Salvar no Local Storage
-function salvarLocalStorage() {
-  localStorage.setItem("produtos", JSON.stringify(produtos));
-}
+// Calcular e atualizar totais
+function atualizarTotais() {
+  const totalTiposProdutos = produtos.length;
+  const totalProdutos = produtos.reduce((acc, p) => acc + p.quantidade, 0);
+  const valorTotal = produtos.reduce((acc, p) => acc + p.quantidade * p.preco, 0);
 
-// Adicionar produto
-function adicionarProduto(e) {
-  e.preventDefault();
-  const nome = nomeInput.value.trim();
-  const quantidade = Number(quantidadeInput.value);
-  const preco = Number(precoInput.value);
-
-  if (!nome || !quantidade || !preco) return;
-
-  const novoProduto = { id: Date.now(), nome, quantidade, preco };
-  produtos.push(novoProduto);
-
-  salvarLocalStorage();
-  renderizarTabela();
-
-  nomeInput.value = "";
-  quantidadeInput.value = "";
-  precoInput.value = "";
+  totalTiposEl.textContent = `Total tipos de produtos: ${totalTiposProdutos}`;
+  totalProdutosEl.textContent = `Total de produtos: ${totalProdutos}`;
+  valorTotalEl.textContent = `Valor total do estoque: R$ ${valorTotal.toFixed(2)}`;
 }
 
 // Remover produto
 function removerProduto(id) {
   produtos = produtos.filter(p => p.id !== id);
-  salvarLocalStorage();
+  localStorage.setItem("produtos", JSON.stringify(produtos));
   renderizarTabela();
-}
-
-// Atualizar totais
-function atualizarTotais() {
-  const totalTipos = produtos.length;
-  const totalProdutos = produtos.reduce((acc, p) => acc + p.quantidade, 0);
-  const valorTotal = produtos.reduce((acc, p) => acc + p.quantidade * p.preco, 0);
-
-  totalTiposEl.textContent = `Total tipos de produtos: ${totalTipos}`;
-  totalProdutosEl.textContent = `Total de produtos: ${totalProdutos}`;
-  valorTotalEl.textContent = `Valor total do estoque: R$ ${valorTotal.toFixed(2)}`;
 }
 
 // Renderizar tabela
@@ -112,9 +81,6 @@ function renderizarTabela() {
 }
 
 // ============================
-// Eventos
+// Inicialização
 // ============================
-formEstoque.addEventListener("submit", adicionarProduto);
-
-// Renderização inicial
 renderizarTabela();

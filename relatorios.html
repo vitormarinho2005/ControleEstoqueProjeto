@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios do Estoque</title>
+  <link rel="stylesheet" href="css/relatorios.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Relatórios do Estoque</h1>
+    <nav>
+      <button onclick="location.href='pag.html'">Início</button>
+      <button onclick="location.href='estoque.html'">Estoque</button>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="totais">
+      <p id="totalTipos">Total tipos de produtos: 0</p>
+      <p id="totalProdutos">Total de produtos: 0</p>
+      <p id="valorTotal">Valor total do estoque: R$ 0.00</p>
+    </section>
+
+    <section class="tabela-section">
+      <table id="tabelaRelatorios">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Preço (R$)</th>
+            <th>Total (R$)</th>
+            <th>Ações</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Produtos serão inseridos via JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 - Estoque Rápido Ltda.</p>
+  </footer>
+
+  <script src="js/relatorios.js"></script>
+</body>
+</html>
