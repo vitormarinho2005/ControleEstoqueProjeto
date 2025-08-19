@@ -2,103 +2,106 @@
    ESTILOS GERAIS
 ================================ */
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-  }
-  
-  /* ================================
-     CABEÇALHO
-  ================================ */
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .header h1 {
-    color: #3498db;
-  }
-  
-  .header nav button {
-    margin: 0 5px;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 6px;
-    background: #3498db;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .header nav button:hover {
-    background: #2980b9;
-  }
-  
-  /* ================================
-     TOTAIS
-  ================================ */
-  .totais {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .totais p {
-    font-size: 1.1rem;
-    margin: 5px 0;
-  }
-  
-  /* ================================
-     TABELA
-  ================================ */
-  .tabela-section {
-    overflow-x: auto;
-  }
-  
-  #tabelaRelatorios {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-  }
-  
-  #tabelaRelatorios th,
-  #tabelaRelatorios td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  #tabelaRelatorios th {
-    background: #3498db;
-    color: #fff;
-  }
-  
-  #tabelaRelatorios tbody tr:nth-child(even) {
-    background: #f1f1f1;
-  }
-  
-  #tabelaRelatorios button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 6px;
-    background: #e74c3c;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  #tabelaRelatorios button:hover {
-    background: #c0392b;
-  }
-  
-  /* ================================
-     RODAPÉ
-  ================================ */
-  .footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1, h2 {
+  color: #3498db;
+}
+
+/* ================================
+   CABEÇALHO
+================================ */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nav-header {
+  margin-top: 10px;
+}
+
+.btn-nav {
+  margin: 0 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-nav:hover {
+  background: #2980b9;
+}
+
+/* ================================
+   TOTAIS
+================================ */
+.totais {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.totais p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+/* ================================
+   TABELA
+================================ */
+.tabela-section {
+  overflow-x: auto;
+}
+
+.produtos-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.produtos-table th,
+.produtos-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.produtos-table th {
+  background: #3498db;
+  color: #fff;
+}
+
+.produtos-table tbody tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+.produtos-table button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #e74c3c;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.produtos-table button:hover {
+  background: #c0392b;
+}
+
+/* ================================
+   RODAPÉ
+================================ */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #555;
+}
